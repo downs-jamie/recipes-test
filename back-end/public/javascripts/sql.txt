@@ -1,0 +1,8 @@
+CREATE TABLE `recipies` (
+  `recipieID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `ingrediants` varchar(255) NOT NULL DEFAULT '',
+  `direction` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`recipieID`),
+  CONSTRAINT `recipies_ibfk_1` FOREIGN KEY (`recipieID`) REFERENCES `user` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
